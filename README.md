@@ -2,6 +2,28 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### `requests.js`
+
+Needs a file named requests.js in src directory containing API key to use. This can be obtained registering at tmdb.com.
+
+File layout as follows:
+
+const APIKEY = "YOUR_API_KEY_HERE";
+
+const requests = {
+fetchTrending: `/trending/all/week?api_key=${APIKEY}&language=en-US`,
+fetchNetflixOriginals: `/discover/tv?api_key=${APIKEY}&with_networks=213`,
+fetchTopRated: `/movie/top_rated?api_key=${APIKEY}&language=en-US`,
+fetchActionMovies: `/discover/movie?api_key=${APIKEY}&with_genres=28`,
+fetchComedyMovies: `/discover/movie?api_key=${APIKEY}&with_genres=35`,
+fetchHorrorMovies: `/discover/movie?api_key=${APIKEY}&with_genres=27`,
+fetchRomanticMovies: `/discover/movie?api_key=${APIKEY}&with_genres=10749`,
+fetchDocumentaries: `/discover/movie?api_key=${APIKEY}&with_genres=99`
+}
+
+export default requests;
+    
+
 ## Available Scripts
 
 In the project directory, you can run:
